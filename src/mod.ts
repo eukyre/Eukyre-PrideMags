@@ -1,60 +1,75 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import fs from "node:fs";
-import path from "node:path";
+import * as fs from "fs";
+import * as path from "path";
 
-import type { DependencyContainer } from "tsyringe";
-import type { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
-import type { IPreSptLoadMod } from "@spt/models/external/IPreSptLoadMod";
+import { DependencyContainer } from "tsyringe";
+import { IPostDBLoadMod } from "@spt/models/external/IPostDBLoadMod";
+import { IpreSptLoadMod } from "@spt/models/external/IpreSptLoadMod";
 import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
-import { IDatabaseTables } from "@spt/models/spt/server/IDatabaseTables";
+
 // WTT imports
 import { WTTInstanceManager } from "./WTTInstanceManager";
+import { epicItemClass } from  "./EpicsEdits";
+
+// Boss imports
 import { CustomItemService } from "./CustomItemService";
 
-class PrideMagItems
-implements IPreSptLoadMod, IPostDBLoadMod
+// Custom Trader Assort Items
+import { CustomAssortSchemeService } from "./CustomAssortSchemeService";
+import { CustomWeaponPresets } from "./CustomWeaponPresets";
+
+
+
+class EukyrePrideMags
+    implements IpreSptLoadMod, IPostDBLoadMod 
 {
     private Instance: WTTInstanceManager = new WTTInstanceManager();
     private version: string;
     private modName = "Eukyre's Pride Mags";
-    private config;
 
+    //#region CustomBosses
     private customItemService: CustomItemService = new CustomItemService();
+    private epicItemClass: epicItemClass = new epicItemClass();
+    //#endregion
+
     private customAssortSchemeService: CustomAssortSchemeService = new CustomAssortSchemeService();
     private customWeaponPresets: CustomWeaponPresets = new CustomWeaponPresets();
 
     debug = false;
 
     // Anything that needs done on preSptLoad, place here.
-    public preSptLoad(container: DependencyContainer): void 
-    {
-    // Initialize the instance manager DO NOTHING ELSE BEFORE THIS
+    public preSptLoad(container: DependencyContainer): void {
+        // Initialize the instance manager DO NOTHING ELSE BEFORE THIS
         this.Instance.preSptLoad(container, this.modName);
         this.Instance.debug = this.debug;
         // EVERYTHING AFTER HERE MUST USE THE INSTANCE
-        
-        this.getVersionFromJson();
-        this.displayCreditBanner();
 
+        this.getVersionFromJson();
+
+        // Custom Bosses
         this.customItemService.preSptLoad(this.Instance);
 
         this.customAssortSchemeService.preSptLoad(this.Instance);
 
         this.customWeaponPresets.preSptLoad(this.Instance);
 
+        this.epicItemClass.preSptLoad(this.Instance);
     }
 
     // Anything that needs done on postDBLoad, place here.
-    public async postDBLoadAsync(container: DependencyContainer): Promise<void> 
-    {
-    // Initialize the instance manager DO NOTHING ELSE BEFORE THIS
+    postDBLoad(container: DependencyContainer): void {
+        // Initialize the instance manager DO NOTHING ELSE BEFORE THIS
         this.Instance.postDBLoad(container);
         // EVERYTHING AFTER HERE MUST USE THE INSTANCE
 
+
+        // Bosses
         this.customItemService.postDBLoad();
+
         this.customAssortSchemeService.postDBLoad();
         this.customWeaponPresets.postDBLoad();
+        this.epicItemClass.postDBLoad();
 
         this.Instance.logger.log(
             `[${this.modName}] Database: Loading complete.`,
@@ -62,14 +77,11 @@ implements IPreSptLoadMod, IPostDBLoadMod
         );
     }
 
-    private getVersionFromJson(): void 
-    {
+    private getVersionFromJson(): void {
         const packageJsonPath = path.join(__dirname, "../package.json");
 
-        fs.readFile(packageJsonPath, "utf-8", (err, data) => 
-        {
-            if (err) 
-            {
+        fs.readFile(packageJsonPath, "utf-8", (err, data) => {
+            if (err) {
                 console.error("Error reading file:", err);
                 return;
             }
@@ -79,7 +91,7 @@ implements IPreSptLoadMod, IPostDBLoadMod
         });
     }
 
-    public colorLog(message: string, color: string) {
+     public colorLog(message: string, color: string) {
         const colorCodes = {
             red: "\x1b[31m",
             green: "\x1b[32m",
@@ -106,8 +118,8 @@ implements IPreSptLoadMod, IPostDBLoadMod
     private displayCreditBanner(): void 
     {
         this.colorLog
-        (`[${this.modName}] Developers: - ProbablyEukyre   Code Framework: GroovypenguinX`, "green");
+        (`[${this.modName}] Developers:  -  ProbablyEukyre  Code Framework: GroovypenguinX`, "green");
     }
 }
 
-module.exports = { mod: new PrideMagItems() };
+module.exports = { mod: new EukyrePrideMags() };

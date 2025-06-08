@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-export interface CombinedConfigItem 
-{
+export interface CombinedConfigItem {
     [itemId: string]: ConfigItem;
 }
-export interface ConfigItem 
-{
+export interface ConfigItem {
     [itemId: string]: {
         itemTplToClone: string;
         overrideProperties: {
@@ -58,18 +56,17 @@ export interface ConfigItem
         addtoHallOfFame: boolean;
         addtoSpecialSlots: boolean;
     };
-    };
+};
 
-export interface Item 
-{
+
+export interface Item {
     _id: string;
     _tpl: string;
     parentId?: string;
     slotId?: string;
 }
-  
-export interface Preset 
-{
+
+export interface Preset {
     _changeWeaponName: boolean;
     _encyclopedia?: string;
     _id: string;
@@ -78,10 +75,9 @@ export interface Preset
     _parent: string;
     _type: string;
 }
-  
 
-export interface VoiceConfig 
-{
+
+export interface VoiceConfig {
     [voiceId: string]: {
         locale: {
             [localeId: string]: {
@@ -96,14 +92,13 @@ export interface VoiceConfig
 // Traders and Task related items
 
 //#region Enums
-export enum traderIDs 
-    {
+export enum traderIDs {
     MECHANIC = "5a7c2eca46aef81a7ca2145d",
     SKIER = "58330581ace78e27b8b10cee",
     PEACEKEEPER = "5935c25fb3acc3127c3d8cd9",
     THERAPIST = "54cb57776803fa99248b456e",
     PRAPOR = "54cb50c76803fa8b248b4571",
-    JAEGER = "5c0647fdd443bc2504c2d371",
+    JAEGAR = "5c0647fdd443bc2504c2d371",
     RAGMAN = "5ac3b934156ae10c4430e83c",
     FENCE = "579dc571d53a0658a154fbec",
     GOBLINKING = "GoblinKing",
@@ -112,20 +107,17 @@ export enum traderIDs
     CROW = "Crow",
     WOLF = "Wolf",
     JUNKDEALER = "JunkDealer",
-    WTTDATABASE = "WTTDatabase",
-    BADGER = "bd3a8b28356d9c6509966546"
+    WTTDATABASE = "WTTDatabase"
 }
 
-export enum currencyIDs 
-    {
+export enum currencyIDs {
     ROUBLES = "5449016a4bdc2d6f028b456f",
     EUROS = "569668774bdc2da2298b4568",
     DOLLARS = "5696686a4bdc2da3298b456a"
 }
-    
-export enum allBotTypes 
-    {
-    ARENAFIGHTER  = "arenafighter",
+
+export enum allBotTypes {
+    ARENAFIGHTER = "arenafighter",
     ARENAFIGHTEREVENT = "arenafighterevent",
     ASSAULT = "assault",
     BEAR = "bear",
@@ -159,8 +151,7 @@ export enum allBotTypes
     USEC = "usec"
 }
 
-export enum inventorySlots 
-    {
+export enum inventorySlots {
     FirstPrimaryWeapon = "55d729c64bdc2d89028b4570",
     SecondPrimaryWeapon = "55d729d14bdc2d86028b456e",
     Holster = "55d729d84bdc2de3098b456b",
@@ -178,8 +169,7 @@ export enum inventorySlots
     ArmBand = "5b3f583786f77411d552fb2b"
 }
 
-export enum Stashes 
-    {
+export enum Stashes {
     LEVEL1 = "566abbc34bdc2d92178b4576",
     LEVEL2 = "5811ce572459770cba1a34ea",
     LEVEL3 = "5811ce662459770f6f490f32",
@@ -188,8 +178,7 @@ export enum Stashes
 
 //Interfaces
 
-export interface QuestZone 
-{
+export interface QuestZone {
     zoneId: string;
     zoneName: string;
     zoneType: string;

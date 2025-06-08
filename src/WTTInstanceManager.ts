@@ -18,12 +18,9 @@ import type { JsonUtil } from "@spt/utils/JsonUtil";
 import type { ProfileHelper } from "@spt/helpers/ProfileHelper";
 import type { RagfairPriceService } from "@spt/services/RagfairPriceService";
 import type { ImporterUtil } from "@spt/utils/ImporterUtil";
-import type  { SaveServer } from "@spt/servers/SaveServer";
-import type  { ItemHelper } from "@spt/helpers/ItemHelper";
-import type  { ApplicationContext } from "@spt/context/ApplicationContext";
-import { WTTRouterService } from "./RouterService";
-import { QuestAPI } from "./QuestAPI";
-import { TraderAPI } from "./TraderAPI";
+import type { SaveServer } from "@spt/servers/SaveServer";
+import type { ItemHelper } from "@spt/helpers/ItemHelper";
+import type { ApplicationContext } from "@spt/context/ApplicationContext";
 
 export class WTTInstanceManager 
 {
@@ -31,13 +28,12 @@ export class WTTInstanceManager
     public modName: string;
     public debug: boolean;
     // Useful Paths
-    public modPath: string = path.join(process.cwd(), "\/user\/mods\/EpicRangeTime-Weapons\/");
-    public dbPath: string = path.join(process.cwd(), "\/user\/mods\/EpicRangeTime-Weapons\/db");
-    public profilePath: string = path.join(process.cwd(), "\/user\/profiles");
+    public profilePath: string = path.join(process.cwd(), "\\user\\profiles");
+    public dbPath: string = path.join(__dirname, "../db");
 
     // Instances
     public container: DependencyContainer;
-    public preSptModLoader: PreSptModLoader;
+    public PreSptModLoader: PreSptModLoader;
     public configServer: ConfigServer;
     public saveServer: SaveServer;
     public itemHelper: ItemHelper;
@@ -46,7 +42,6 @@ export class WTTInstanceManager
     public dynamicRouter: DynamicRouterModService;
     public profileController: ProfileController;
     public profileCallbacks: ProfileCallbacks;
-    private routerService: WTTRouterService = new WTTRouterService();
     //#endregion
 
     //#region Acceessible in or after postDBLoad
@@ -60,8 +55,6 @@ export class WTTInstanceManager
     public importerUtil: ImporterUtil;
     public traderAssortService: TraderAssortService;
     public applicationContext: ApplicationContext;
-    public questApi: QuestAPI = new QuestAPI();
-    public traderApi: TraderAPI = new TraderAPI();
     //#endregion
 
     // Call at the start of the mods postDBLoad method
@@ -70,7 +63,7 @@ export class WTTInstanceManager
         this.modName = mod;
 
         this.container = container;
-        this.preSptModLoader = container.resolve<PreSptModLoader>("PreSptModLoader");
+        this.PreSptModLoader = container.resolve<PreSptModLoader>("PreSptModLoader");
         this.imageRouter = container.resolve<ImageRouter>("ImageRouter");
         this.configServer = container.resolve<ConfigServer>("ConfigServer");
         this.saveServer = container.resolve<SaveServer>("SaveServer");
@@ -84,9 +77,6 @@ export class WTTInstanceManager
         this.traderAssortService = container.resolve<TraderAssortService>("TraderAssortService");
 
 
-        this.questApi.preSptLoad(this);
-        this.traderApi.preSptLoad(this);
-        this.routerService.preSptLoad(this);
     }
 
     public postDBLoad(container: DependencyContainer): void
@@ -99,8 +89,29 @@ export class WTTInstanceManager
         this.importerUtil = container.resolve<ImporterUtil>("ImporterUtil");
         this.applicationContext = container.resolve<ApplicationContext>("ApplicationContext");
 
-        this.traderApi.postDBLoad();
-        this.questApi.postDBLoad();
     }
 
+    public colorLog(message: string, color: string) {
+        const colorCodes = {
+            red: "\x1b[31m",
+            green: "\x1b[32m",
+            yellow: "\x1b[33m",
+            blue: "\x1b[34m",
+            magenta: "\x1b[35m",
+            cyan: "\x1b[36m",
+            white: "\x1b[37m",
+            gray: "\x1b[90m",
+            brightRed: "\x1b[91m",
+            brightGreen: "\x1b[92m",
+            brightYellow: "\x1b[93m",
+            brightBlue: "\x1b[94m",
+            brightMagenta: "\x1b[95m",
+            brightCyan: "\x1b[96m",
+            brightWhite: "\x1b[97m"
+        };
+      
+        const resetCode = "\x1b[0m";
+        const colorCode = colorCodes[color as keyof typeof colorCodes] || "\x1b[37m"; // Default to white if color is invalid.
+        //console.log(`${colorCode}${message}${resetCode}`); // Log the colored message here
+    }
 }

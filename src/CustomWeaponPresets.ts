@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import type { WTTInstanceManager } from "./WTTInstanceManager";
 import weaponPresetsData from "../db/CustomWeaponPresets/WeaponPresets.json";
-import * as path from "path";
+import * as path from "node:path";
+import type { IPreset } from "@spt/models/eft/common/IGlobals";
 const modPath = path.normalize(path.join(__dirname, ".."));
 
 interface WeaponPresets {
-    ItemPresets?: any; // or you can specify a more accurate type if known
+    ItemPresets?: IPreset; // or you can specify a more accurate type if known
 }
 
 const weaponPresets: WeaponPresets = weaponPresetsData;
@@ -39,7 +40,7 @@ export class CustomWeaponPresets {
         const addedLocales = {};
 
         for (const locale of serverLocales) {
-            let localeFile;
+            let localeFile: { [x: string]: string; };
             try {
                 // Attempt to require the locale file
                 localeFile = require(`${modPath}/db/locales/${locale}.json`);

@@ -34,19 +34,19 @@
         "traderId": "PEACEKEEPER",
         "traderItems": [
             {
-                "unlimitedCount": false,
-                "stackObjectsCount": 10
+                "unlimitedCount": true,
+                "stackObjectsCount": 99
             }
         ],
         "barterScheme": [
             {
                 "count": 29,
-                "_tpl": "ROUBLES"
+                "_tpl": "DOLLARS"
             }
         ],
         "loyallevelitems": 3,
-		"fleaPriceRoubles": 25900,
-		"handbookPriceRoubles": 3770,
+		"fleaPriceDOLLARS": 25900,
+		"handbookPriceDOLLARS": 3770,
 		"addtoStaticLootContainers": true,
 		"StaticLootContainers": [
 			{
@@ -102,19 +102,19 @@
         "traderId": "PEACEKEEPER",
         "traderItems": [
             {
-                "unlimitedCount": false,
-                "stackObjectsCount": 10
+                "unlimitedCount": true,
+                "stackObjectsCount": 99
             }
         ],
         "barterScheme": [
             {
                 "count": 29,
-                "_tpl": "ROUBLES"
+                "_tpl": "DOLLARS"
             }
         ],
         "loyallevelitems": 3,
-		"fleaPriceRoubles": 25900,
-		"handbookPriceRoubles": 3770,
+		"fleaPriceDOLLARS": 25900,
+		"handbookPriceDOLLARS": 3770,
 		"addtoStaticLootContainers": true,
 		"StaticLootContainers": [
 			{
@@ -170,19 +170,19 @@
         "traderId": "PEACEKEEPER",
         "traderItems": [
             {
-                "unlimitedCount": false,
-                "stackObjectsCount": 10
+                "unlimitedCount": true,
+                "stackObjectsCount": 99
             }
         ],
         "barterScheme": [
             {
                 "count": 29,
-                "_tpl": "ROUBLES"
+                "_tpl": "DOLLARS"
             }
         ],
         "loyallevelitems": 3,
-		"fleaPriceRoubles": 25900,
-		"handbookPriceRoubles": 3770,
+		"fleaPriceDOLLARS": 25900,
+		"handbookPriceDOLLARS": 3770,
 		"addtoStaticLootContainers": true,
 		"StaticLootContainers": [
 			{
@@ -238,19 +238,19 @@
         "traderId": "PEACEKEEPER",
         "traderItems": [
             {
-                "unlimitedCount": false,
-                "stackObjectsCount": 10
+                "unlimitedCount": true,
+                "stackObjectsCount": 99
             }
         ],
         "barterScheme": [
             {
                 "count": 29,
-                "_tpl": "ROUBLES"
+                "_tpl": "DOLLARS"
             }
         ],
         "loyallevelitems": 3,
-		"fleaPriceRoubles": 25900,
-		"handbookPriceRoubles": 3770,
+		"fleaPriceDOLLARS": 25900,
+		"handbookPriceDOLLARS": 3770,
 		"addtoStaticLootContainers": true,
 		"StaticLootContainers": [
 			{
