@@ -1,0 +1,274 @@
+{
+	"684611c6912893e08a425c67": {
+		"itemTplToClone": "5aaa5dfee5b5b000140293d3",
+		"parentId": "MAGAZINE",
+		"handbookParentId": "MOD_MAGAZINE",
+		"overrideProperties": {
+			"Prefab": {
+				"path": "Mags/mag_magpul_30_nb.bundle",
+				"rcid": ""
+			},
+			"ConflictingItems": [],
+			"ExaminedByDefault": true,
+			"Ergonomics": -3,
+			"CanSellOnRagfair": true,
+			"Height": 2,
+			"VisibleAmmoRangesString": "1-3"
+		},
+		"locales": {
+			"en": {
+				"name": "5.56x45 Magpul P(ride)MAG 30 GEN M3 STANAG 30-round magazine (Non-Binary)",
+				"shortName": "GEN M3",
+				"description": "A 30-round polymer Magpul PMAG GEN M3 30 magazine, for 5.56x45 ammunition. Painted to resemble the Non-Binary Pride Flag."
+			}
+		},
+		"clearClonedProps": false,
+		"addtoInventorySlots": [],
+		"addtoModSlots": true,
+		"modSlot": [
+			"mod_magazine"
+		],
+		"ModdableItemWhitelist": [],
+		"ModdableItemBlacklist": [],
+		"addtoTraders": true,
+        "traderId": "PEACEKEEPER",
+        "traderItems": [
+            {
+                "unlimitedCount": false,
+                "stackObjectsCount": 10
+            }
+        ],
+        "barterScheme": [
+            {
+                "count": 29,
+                "_tpl": "ROUBLES"
+            }
+        ],
+        "loyallevelitems": 3,
+		"fleaPriceRoubles": 25900,
+		"handbookPriceRoubles": 3770,
+		"addtoStaticLootContainers": true,
+		"StaticLootContainers": [
+			{
+				"ContainerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
+				"Probability": 7
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+				"Probability": 6
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+				"Probability": 5
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+				"Probability": 1
+			}
+		]
+	},
+	"684612a79d91b6d7fbf8cb07": {
+		"itemTplToClone": "5aaa5dfee5b5b000140293d3",
+		"parentId": "MAGAZINE",
+		"handbookParentId": "MOD_MAGAZINE",
+		"overrideProperties": {
+			"Prefab": {
+				"path": "Mags/mag_magpul_30_pan.bundle",
+				"rcid": ""
+			},
+			"ConflictingItems": [],
+			"ExaminedByDefault": true,
+			"Ergonomics": -3,
+			"CanSellOnRagfair": true,
+			"Height": 2,
+			"VisibleAmmoRangesString": "1-3"
+		},
+		"locales": {
+			"en": {
+				"name": "5.56x45 Magpul P(ride)MAG 30 GEN M3 STANAG 30-round magazine (Pansexual)",
+				"shortName": "GEN M3",
+				"description": "A 30-round polymer Magpul PMAG GEN M3 30 magazine, for 5.56x45 ammunition. Painted to resemble the Pansexual Pride Flag."
+			}
+		},
+		"clearClonedProps": false,
+		"addtoInventorySlots": [],
+		"addtoModSlots": true,
+		"modSlot": [
+			"mod_magazine"
+		],
+		"ModdableItemWhitelist": [],
+		"ModdableItemBlacklist": [],
+		"addtoTraders": true,
+        "traderId": "PEACEKEEPER",
+        "traderItems": [
+            {
+                "unlimitedCount": false,
+                "stackObjectsCount": 10
+            }
+        ],
+        "barterScheme": [
+            {
+                "count": 29,
+                "_tpl": "ROUBLES"
+            }
+        ],
+        "loyallevelitems": 3,
+		"fleaPriceRoubles": 25900,
+		"handbookPriceRoubles": 3770,
+		"addtoStaticLootContainers": true,
+		"StaticLootContainers": [
+			{
+				"ContainerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
+				"Probability": 7
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+				"Probability": 6
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+				"Probability": 5
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+				"Probability": 1
+			}
+		]
+	},
+	"684612ca9520b3bd65384e1f": {
+		"itemTplToClone": "5aaa5dfee5b5b000140293d3",
+		"parentId": "MAGAZINE",
+		"handbookParentId": "MOD_MAGAZINE",
+		"overrideProperties": {
+			"Prefab": {
+				"path": "Mags/mag_magpul_30_pride.bundle",
+				"rcid": ""
+			},
+			"ConflictingItems": [],
+			"ExaminedByDefault": true,
+			"Ergonomics": -3,
+			"CanSellOnRagfair": true,
+			"Height": 2,
+			"VisibleAmmoRangesString": "1-3"
+		},
+		"locales": {
+			"en": {
+				"name": "5.56x45 Magpul P(ride)MAG 30 GEN M3 STANAG 30-round magazine (Pride)",
+				"shortName": "GEN M3",
+				"description": "A 30-round polymer Magpul PMAG GEN M3 30 magazine, for 5.56x45 ammunition. Painted to resemble the Pride Flag."
+			}
+		},
+		"clearClonedProps": false,
+		"addtoInventorySlots": [],
+		"addtoModSlots": true,
+		"modSlot": [
+			"mod_magazine"
+		],
+		"ModdableItemWhitelist": [],
+		"ModdableItemBlacklist": [],
+		"addtoTraders": true,
+        "traderId": "PEACEKEEPER",
+        "traderItems": [
+            {
+                "unlimitedCount": false,
+                "stackObjectsCount": 10
+            }
+        ],
+        "barterScheme": [
+            {
+                "count": 29,
+                "_tpl": "ROUBLES"
+            }
+        ],
+        "loyallevelitems": 3,
+		"fleaPriceRoubles": 25900,
+		"handbookPriceRoubles": 3770,
+		"addtoStaticLootContainers": true,
+		"StaticLootContainers": [
+			{
+				"ContainerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
+				"Probability": 7
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+				"Probability": 6
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+				"Probability": 5
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+				"Probability": 1
+			}
+		]
+	},
+	"684612ea5d92af4279c83027": {
+		"itemTplToClone": "5aaa5dfee5b5b000140293d3",
+		"parentId": "MAGAZINE",
+		"handbookParentId": "MOD_MAGAZINE",
+		"overrideProperties": {
+			"Prefab": {
+				"path": "Mags/mag_magpul_30_trans.bundle",
+				"rcid": ""
+			},
+			"ConflictingItems": [],
+			"ExaminedByDefault": true,
+			"Ergonomics": -3,
+			"CanSellOnRagfair": true,
+			"Height": 2,
+			"VisibleAmmoRangesString": "1-3"
+		},
+		"locales": {
+			"en": {
+				"name": "5.56x45 Magpul P(ride)MAG 30 GEN M3 STANAG 30-round magazine (Transgender)",
+				"shortName": "GEN M3",
+				"description": "A 30-round polymer Magpul PMAG GEN M3 30 magazine, for 5.56x45 ammunition. Painted to resemble the Transgender Pride Flag."
+			}
+		},
+		"clearClonedProps": false,
+		"addtoInventorySlots": [],
+		"addtoModSlots": true,
+		"modSlot": [
+			"mod_magazine"
+		],
+		"ModdableItemWhitelist": [],
+		"ModdableItemBlacklist": [],
+		"addtoTraders": true,
+        "traderId": "PEACEKEEPER",
+        "traderItems": [
+            {
+                "unlimitedCount": false,
+                "stackObjectsCount": 10
+            }
+        ],
+        "barterScheme": [
+            {
+                "count": 29,
+                "_tpl": "ROUBLES"
+            }
+        ],
+        "loyallevelitems": 3,
+		"fleaPriceRoubles": 25900,
+		"handbookPriceRoubles": 3770,
+		"addtoStaticLootContainers": true,
+		"StaticLootContainers": [
+			{
+				"ContainerName": "LOOTCONTAINER_AIRDROP_WEAPON_CRATE",
+				"Probability": 7
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_4X4",
+				"Probability": 6
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_5X2",
+				"Probability": 5
+			},
+			{
+				"ContainerName": "LOOTCONTAINER_WEAPON_BOX_6X3",
+				"Probability": 1
+			}
+		]
+	}
+}

@@ -1,7 +1,31 @@
 {
     "manifest": [
         {
-            "key": "Ammo/9mm_export_900_can.bundle",
+            "key": "Mags/mag_magpul_30_nb.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "Mags/mag_magpul_30_pan.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "Mags/mag_magpul_30_pride.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "Mags/mag_magpul_30_trans.bundle",
             "dependencyKeys": [
                 "shaders",
                 "cubemaps",
