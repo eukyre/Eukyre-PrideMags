@@ -10,7 +10,7 @@ import { LogTextColor } from "@spt/models/spt/logging/LogTextColor";
 
 // WTT imports
 import { WTTInstanceManager } from "./WTTInstanceManager";
-import { epicItemClass } from  "./EpicsEdits";
+import { epicItemClass } from "./EpicsEdits";
 
 // Boss imports
 import { CustomItemService } from "./CustomItemService";
@@ -22,8 +22,7 @@ import { CustomWeaponPresets } from "./CustomWeaponPresets";
 
 
 class EukyrePrideMags
-    implements IpreSptLoadMod, IPostDBLoadMod 
-{
+    implements IpreSptLoadMod, IPostDBLoadMod {
     private Instance: WTTInstanceManager = new WTTInstanceManager();
     private version: string;
     private modName = "Eukyre's Pride Mags";
@@ -46,6 +45,7 @@ class EukyrePrideMags
         // EVERYTHING AFTER HERE MUST USE THE INSTANCE
 
         this.getVersionFromJson();
+        this.displayCreditBanner();
 
         // Custom Bosses
         this.customItemService.preSptLoad(this.Instance);
@@ -91,7 +91,7 @@ class EukyrePrideMags
         });
     }
 
-     public colorLog(message: string, color: string) {
+    public colorLog(message: string, color: string) {
         const colorCodes = {
             red: "\x1b[31m",
             green: "\x1b[32m",
@@ -109,16 +109,15 @@ class EukyrePrideMags
             brightCyan: "\x1b[96m",
             brightWhite: "\x1b[97m"
         };
-      
+
         const resetCode = "\x1b[0m";
         const colorCode = colorCodes[color as keyof typeof colorCodes] || "\x1b[37m"; // Default to white if color is invalid.
         console.log(`${colorCode}${message}${resetCode}`); // Log the colored message here
     }
 
-    private displayCreditBanner(): void 
-    {
+    private displayCreditBanner(): void {
         this.colorLog
-        (`[${this.modName}] Developers:  -  ProbablyEukyre  Code Framework: GroovypenguinX`, "green");
+            (`[${this.modName}] Developers:  -  ProbablyEukyre  Code Framework: GroovypenguinX - Happy Pride Month!`, "green");
     }
 }
 

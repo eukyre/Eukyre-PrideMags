@@ -63,6 +63,7 @@ class EukyrePrideMags {
         this.Instance.debug = this.debug;
         // EVERYTHING AFTER HERE MUST USE THE INSTANCE
         this.getVersionFromJson();
+        this.displayCreditBanner();
         // Custom Bosses
         this.customItemService.preSptLoad(this.Instance);
         this.customAssortSchemeService.preSptLoad(this.Instance);
@@ -115,7 +116,7 @@ class EukyrePrideMags {
         console.log(`${colorCode}${message}${resetCode}`); // Log the colored message here
     }
     displayCreditBanner() {
-        this.colorLog(`[${this.modName}] Developers:  -  ProbablyEukyre  Code Framework: GroovypenguinX`, "green");
+        this.colorLog(`[${this.modName}] Developers:  -  ProbablyEukyre  Code Framework: GroovypenguinX - Happy Pride Month!`, "green");
     }
 }
 module.exports = { mod: new EukyrePrideMags() };
