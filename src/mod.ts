@@ -21,11 +21,11 @@ import { CustomWeaponPresets } from "./CustomWeaponPresets";
 
 
 
-class EukyrePrideMags
+class ConsortiumOfThings
     implements IpreSptLoadMod, IPostDBLoadMod {
     private Instance: WTTInstanceManager = new WTTInstanceManager();
     private version: string;
-    private modName = "Eukyre's Pride Mags";
+    private modName = "Eukyre's Consortium of Things";
 
     //#region CustomBosses
     private customItemService: CustomItemService = new CustomItemService();
@@ -121,4 +121,4 @@ class EukyrePrideMags
     }
 }
 
-module.exports = { mod: new EukyrePrideMags() };
+module.exports = { mod: new ConsortiumOfThings() };

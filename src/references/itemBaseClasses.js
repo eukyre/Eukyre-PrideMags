@@ -72,5 +72,6 @@ exports.ItemBaseClassMap = {
     "TOOL": "57864bb7245977548b3b66c2",
     "UBGL": "55818b014bdc2ddc698b456b",
     "VIS_OBSERV_DEVICE": "5448e5724bdc2ddf718b4568",
+    "MOUNT": "55818b224bdc2dde698b456f",
 };
 //# sourceMappingURL=itemBaseClasses.js.map

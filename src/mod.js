@@ -45,10 +45,10 @@ const CustomItemService_1 = require("./CustomItemService");
 // Custom Trader Assort Items
 const CustomAssortSchemeService_1 = require("./CustomAssortSchemeService");
 const CustomWeaponPresets_1 = require("./CustomWeaponPresets");
-class EukyrePrideMags {
+class ConsortiumOfThings {
     Instance = new WTTInstanceManager_1.WTTInstanceManager();
     version;
-    modName = "Eukyre's Pride Mags";
+    modName = "Eukyre's Consortium of Things";
     //#region CustomBosses
     customItemService = new CustomItemService_1.CustomItemService();
     epicItemClass = new EpicsEdits_1.epicItemClass();
@@ -119,5 +119,5 @@ class EukyrePrideMags {
         this.colorLog(`[${this.modName}] Developers:  -  ProbablyEukyre  Code Framework: GroovypenguinX - Happy Pride Month!`, "green");
     }
 }
-module.exports = { mod: new EukyrePrideMags() };
+module.exports = { mod: new ConsortiumOfThings() };
 //# sourceMappingURL=mod.js.map
