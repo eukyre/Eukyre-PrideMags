@@ -1,7 +1,7 @@
 {
     "manifest": [
         {
-            "key": "Mags/mag_magpul_30_nb.bundle",
+            "key": "Ammo/40sw/patron_40sw_fmj.bundle",
             "dependencyKeys": [
                 "shaders",
                 "cubemaps",
@@ -9,7 +9,7 @@
             ]
         },
         {
-            "key": "Mags/mag_magpul_30_pan.bundle",
+            "key": "Ammo/40sw/patron_40sw_jhp.bundle",
             "dependencyKeys": [
                 "shaders",
                 "cubemaps",
@@ -17,7 +17,7 @@
             ]
         },
         {
-            "key": "Mags/mag_magpul_30_pride.bundle",
+            "key": "Ammo/40sw/patron_40sw_plus_p.bundle",
             "dependencyKeys": [
                 "shaders",
                 "cubemaps",
@@ -25,7 +25,7 @@
             ]
         },
         {
-            "key": "Mags/mag_magpul_30_trans.bundle",
+            "key": "Ammo/40sw/patron_40sw_tracer.bundle",
             "dependencyKeys": [
                 "shaders",
                 "cubemaps",
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "key": "Mags/mag_magpul_30_bi.bundle",
+            "key": "Ammo/338lm/patron_86x70_rip.bundle",
             "dependencyKeys": [
                 "shaders",
                 "cubemaps",
@@ -41,7 +41,39 @@
             ]
         },
         {
-            "key": "Mags/mag_magpul_30_ace.bundle",
+            "key": "Attachments/Receivers/reciever_glock_22_mos_slide.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "Barters/barter_item_blahaj.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "Barters/barter_blahaj_smol.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "Attachments/Mounts/mount_unity_cog_blk.bundle",
+            "dependencyKeys": [
+                "shaders",
+                "cubemaps",
+                "assets/commonassets/physics/physicsmaterials.bundle"
+            ]
+        },
+        {
+            "key": "Attachments/Mounts/mount_unity_cog_fde.bundle",
             "dependencyKeys": [
                 "shaders",
                 "cubemaps",
