@@ -1,12 +1,14 @@
 {
-    "name": "PrideMags",
-    "version": "3.1.1",
+    "name": "ConsortiumOfThings",
+    "version": "1.0.0",
     "main": "src/mod.js",
-    "license": "CC-NY-ND-NC 4.0",
+    "license": "MIT",
     "author": "ProbablyEukyre",
     "isBundleMod": true,
     "sptVersion": "~3.11.x",
-    "incompatibilities":[],
+    "incompatibilities":[
+        "Blahaj"
+    ],
     "scripts": {
         "setup": "npm i",
         "build": "node ./packageBuild.ts"
